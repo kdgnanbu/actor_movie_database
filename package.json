@@ -1,0 +1,20 @@
+{
+    "name": "node-vue",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "concurrently \"npm run dev --prefix vue-frontend\" \"npm start --prefix server\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^2.2.0",
+        "concurrently": "^9.2.1",
+        "cors": "^2.8.5",
+        "express": "^5.1.0",
+        "mysql2": "^3.15.3"
+    }
+}

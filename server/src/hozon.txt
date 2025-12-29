@@ -1,0 +1,53 @@
+// app.get('/api/actor', (req, res) => {
+//   const sql = `
+// SELECT 
+//   a.actor_no,
+//   a.name,
+//   a.date_of_birth,
+//   a.gender_no,
+//   g.gender,
+//   a.nationality_no,
+//   n.nationality,
+//   w.count_no,
+//   w.awards
+// FROM actor a
+// LEFT JOIN awards w
+//   ON a.actor_no = w.actor_no
+// LEFT JOIN gender g
+//   ON a.gender_no = g.gender_no
+// LEFT JOIN nationality n
+//   ON a.nationality_no = n.nationality_no
+// ORDER BY a.actor_no, w.count_no;
+//   `;
+
+//   connection.query(sql, (err, rows) => {
+//     if (err) return res.status(500).json({ error: err.message });
+
+//     const result = {};
+
+//     rows.forEach(row => {
+//       const id = row.actor_no;
+
+//       if (!result[id]) {
+//         result[id] = {
+//           actor_no: row.actor_no,
+//           name: row.name,
+//           date_of_birth: row.date_of_birth
+//             ? row.date_of_birth.toISOString().split("T")[0]
+//             : null,
+//           gender_no: row.gender_no,
+//           gender: row.gender,
+//           nationality_no: row.nationality_no,
+//           nationality: row.nationality,
+//           awards: []
+//         };
+//       }
+
+//       if (row.awards) {
+//         result[id].awards.push(row.awards);
+//       }
+//     });
+
+//     res.json(Object.values(result));
+//   });
+// });
