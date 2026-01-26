@@ -1,0 +1,15 @@
+
+.container {
+  background-color: #fefefe;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+
+/* タイトル */
+h1 {
+
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size:25px;
+}
